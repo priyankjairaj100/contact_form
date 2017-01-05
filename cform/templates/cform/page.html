@@ -1,0 +1,7 @@
+{% extends "cform/site.html" %}
+
+{% block content %}
+	{% for cred in object_list %}
+	<h5>{{cred.date|date:"Y-m-d"}}<a href="/cform/{{cred.id}}">NAME:{{cred.firstname}} {{cred.lastname}}</a></h5>
+	{% endfor %}
+{% endblock %}
